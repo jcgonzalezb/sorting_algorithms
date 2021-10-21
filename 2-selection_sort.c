@@ -6,7 +6,7 @@
  * @array: Array of integers.
  * @size: Size of the string.
  *
- * Return: Print the array after each time you swap two elements
+ * Return: Print the array after each time you swap two elements.
  */
 void selection_sort(int *array, size_t size)
 {
