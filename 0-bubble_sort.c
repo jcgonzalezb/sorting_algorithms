@@ -1,10 +1,12 @@
 #include "sort.h"
 
 /**
- * bubble_sort - implementation of the djb2 algorithm
- * @str: string used to generate hash value
+ * bubble_sort - Sorts an array of integers in ascending order
+ * using the Bubble sort algorithm.
+ * @array: Array of integers.
+ * @size: Size of the string.
  *
- * Return: hash value
+ * Return: Print the array after each time you swap two elements.
  */
 void bubble_sort(int *array, size_t size)
 {
