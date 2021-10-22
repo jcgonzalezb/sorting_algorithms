@@ -25,5 +25,7 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+void quickSort(int array[], int low, int high);
+int partition (int array[], int low, int high);
 
 #endif
