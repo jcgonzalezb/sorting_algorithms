@@ -1,19 +1,19 @@
 #include "sort.h"
 /**
- * quick_sort - function that sorts a doubly linked list of integers
- * @array: array
- * @size: array
- * Return: the value
+ * quick_sort - Function that sorts an array of integers in
+ * ascending order using the Quick sort algorithm.
+ * @array: Array of integers.
+ * @size: Size of the string.
+ * Return: Print the array after each time you swap two elements.
  */
 void quick_sort(int *array, size_t size)
 {
 	quickSort(array, 0, size - 1, size);
 }
 /**
- * swap - function that sorts a doubly linked list of integers
- * @a: array
- * @b: array
- * Return: the value
+ * swap - Function to swap two elements inside an array.
+ * @a: Value inside the first position.
+ * @b: Value inside the second position.
  */
 void swap(int *a, int *b)
 {
@@ -22,12 +22,13 @@ void swap(int *a, int *b)
 	*b = t;
 }
 /**
- * partition - function that sorts a doubly linked list of integers
- * @array: array
- * @low: array
- * @high: array
- * @size: array
- * Return: the value
+ * partition - Function that creates two partitions inside
+ * the array using the Lomuto partition scheme.
+ * @array: Array of integers.
+ * @low: Starting index inside the array.
+ * @high: Ending index inside the array.
+ * @size: Size of the string.
+ * Return: Print the array after each time you swap two elements.
  */
 int partition(int array[], int low, int high, size_t size)
 {
@@ -50,12 +51,12 @@ int partition(int array[], int low, int high, size_t size)
 	return (i + 1);
 }
 /**
- * quickSort - function that sorts a doubly linked list of integers
- * @array: array
- * @low: array
- * @high: array
- * @size: array
- * Return: the value
+ * quickSort - Function that sorts an array of integers in
+ * ascending order using the Quick sort algorithm.
+ * @array: Array of integers.
+ * @low: Starting index inside the array.
+ * @high: Ending index inside the array.
+ * @size: Size of the string.
  */
 void quickSort(int array[], int low, int high, size_t size)
 {
