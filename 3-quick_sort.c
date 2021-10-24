@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "sort.h"
 /**
  * quick_sort - Function that sorts an array of integers in
