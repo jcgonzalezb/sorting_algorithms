@@ -30,7 +30,7 @@ void swap(int *a, int *b)
  * @size: Size of the string.
  * Return: Print the array after each time you swap two elements.
  */
-int partition(int array[], int low, int high, size_t size)
+int partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int i = (low - 1);
@@ -58,7 +58,7 @@ int partition(int array[], int low, int high, size_t size)
  * @high: Ending index inside the array.
  * @size: Size of the string.
  */
-void quickSort(int array[], int low, int high, size_t size)
+void quickSort(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
