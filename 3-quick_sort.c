@@ -1,16 +1,5 @@
 #include "sort.h"
 /**
- * quick_sort - Function that sorts an array of integers in
- * ascending order using the Quick sort algorithm.
- * @array: Array of integers.
- * @size: Size of the string.
- * Return: Print the array after each time you swap two elements.
- */
-void quick_sort(int *array, size_t size)
-{
-	quickSort(array, 0, size - 1, size);
-}
-/**
  * swap - Function to swap two elements inside an array.
  * @a: Value inside the first position.
  * @b: Value inside the second position.
@@ -21,6 +10,7 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = t;
 }
+
 /**
  * partition - Function that creates two partitions inside
  * the array using the Lomuto partition scheme.
@@ -50,6 +40,7 @@ int partition(int *array, int low, int high, size_t size)
 		print_array(array, size);
 	return (i + 1);
 }
+
 /**
  * quickSort - Function that sorts an array of integers in
  * ascending order using the Quick sort algorithm.
@@ -68,3 +59,18 @@ void quickSort(int *array, int low, int high, size_t size)
 		quickSort(array, num + 1, high, size);
 	}
 }
+
+/**
+ * quick_sort - Function that sorts an array of integers in
+ * ascending order using the Quick sort algorithm.
+ * @array: Array of integers.
+ * @size: Size of the string.
+ * Return: Print the array after each time you swap two elements.
+ */
+void quick_sort(int *array, size_t size)
+{
+	quickSort(array, 0, size - 1, size);
+}
+
+
+
