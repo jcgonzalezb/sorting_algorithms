@@ -62,9 +62,9 @@ void quickSort(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		int pi = partition(array, low, high, size);
+		int num = partition(array, low, high, size);
 
-		quickSort(array, low, pi - 1, size);
-		quickSort(array, pi + 1, high, size);
+		quickSort(array, low, num - 1, size);
+		quickSort(array, num + 1, high, size);
 	}
 }
