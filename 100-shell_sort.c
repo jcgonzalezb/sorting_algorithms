@@ -10,9 +10,11 @@
 void shell_sort(int *array, size_t size)
 {
 	int i = 0;
+	int j = 0;
 	int interval = 1;
 	int max = size;
-	int j = 0;
+	int temp = 0;
+	int first = array[0];
 
 	while (interval <= max / 3)
 	{
@@ -22,7 +24,7 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = interval; i < max; i += 1)
 		{
-			int temp = array[i];
+			temp = array[i];
 
 			for (j = i; j >= interval && array[j - interval] > temp; j -= interval)
 			{
@@ -31,6 +33,7 @@ void shell_sort(int *array, size_t size)
 			array[j] = temp;
 		}
 		interval = interval / 3;
-		print_array(array, size);
+		if (first != array[j])
+			print_array(array, size);
 	}
 }
