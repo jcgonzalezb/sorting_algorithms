@@ -11,6 +11,18 @@ void swap(int *a, int *b)
 	*b = t;
 }
 
+int areSame(int arr[], int n)
+{
+	int first = arr[0];
+	int i = 0;
+
+	for (i = 1; i < n; i++)
+		if (arr[i] != first)
+			return 0;
+	return 1;
+}
+
+
 /**
  * partition - Function that creates two partitions inside
  * the array using the Lomuto partition scheme.
@@ -26,20 +38,19 @@ int partition(int *array, int low, int high, size_t size)
 	int i = (low - 1);
 	int j = 0;
 
-	for (j = low; j <= high - 1; j++)
+	for (j = low; j <= high; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
 			i++;
-			swap(&array[i], &array[j]);
 			if (i != j)
+			{
+				swap(&array[i], &array[j]);
 				print_array(array, size);
+			}
 		}
 	}
-	swap(&array[i + 1], &array[high]);
-	if (i + 1 != high)
-		print_array(array, size);
-	return (i + 1);
+	return (i);
 }
 
 /**
