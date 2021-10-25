@@ -9,7 +9,7 @@ void counting_sort(int *array, size_t size)
 	int *count, *copy;
 	int max = 0, i = 0;
 
-	if (array == NULL)
+	if (array == NULL || size > 2)
 		return;
 	for (i = 0; i < (int)size; i++)
 		if (array[i] > max)
@@ -17,7 +17,6 @@ void counting_sort(int *array, size_t size)
 	count = malloc(sizeof(*count) * (max + 1));
 	if (!count)
 	{
-		free(count);
 		return;
 	}
 	for (i = 0; i <= max; ++i)
@@ -36,7 +35,6 @@ void counting_sort(int *array, size_t size)
 	copy = malloc(sizeof(*copy) * size);
 	if (!copy)
 	{
-		free(copy);
 		return;
 	}
 	for (i = size - 1; i >= 0; i--)
