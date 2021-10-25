@@ -11,18 +11,6 @@ void swap(int *a, int *b)
 	*b = t;
 }
 
-int areSame(int arr[], int n)
-{
-	int first = arr[0];
-	int i = 0;
-
-	for (i = 1; i < n; i++)
-		if (arr[i] != first)
-			return 0;
-	return 1;
-}
-
-
 /**
  * partition - Function that creates two partitions inside
  * the array using the Lomuto partition scheme.
