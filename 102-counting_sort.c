@@ -9,6 +9,8 @@ void counting_sort(int *array, size_t size)
 	int *count, *copy;
 	int max = 0, i = 0;
 
+	if (array == NULL)
+		return;
 	for (i = 0; i < (int)size; i++)
 		if (array[i] > max)
 			max = array[i];
