@@ -25,7 +25,7 @@ void shell_sort(int *array, size_t size)
 	}
 	while (interval >= 1)
 	{
-		for (i = interval; i < max; i += 1)
+		for (i = interval; i < max; i++)
 		{
 			temp = array[i];
 
