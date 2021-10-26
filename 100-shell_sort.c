@@ -5,7 +5,6 @@
  * Knuth sequence.
  * @array: Array of integers.
  * @size: Size of the string.
- * Return: Print the array after each time you swap two elements.
  */
 void shell_sort(int *array, size_t size)
 {
@@ -24,7 +23,7 @@ void shell_sort(int *array, size_t size)
 	}
 	while (gap > 0)
 	{
-		for (i = gap; i < (int)size; i++)
+		for (i = gap; i < max; i++)
 		{
 			temp = array[i];
 			j = i;
