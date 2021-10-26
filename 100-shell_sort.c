@@ -16,7 +16,7 @@ void shell_sort(int *array, size_t size)
 	int temp = 0;
 	int first = array[0];
 
-	if (array == NULL || size < 2)
+	if (!array || size < 2 || !size)
 		return;
 
 	while (interval <= max / 3)
