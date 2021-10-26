@@ -23,7 +23,7 @@ void shell_sort(int *array, size_t size)
 	{
 		interval = interval * 3 + 1;
 	}
-	while (interval >= 1)
+	while (interval > 0)
 	{
 		for (i = interval; i < max; i++)
 		{
