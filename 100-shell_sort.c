@@ -17,17 +17,17 @@ void shell_sort(int *array, size_t size)
 	if (!array || size < 2 || !size)
 		return;
 
-	while (gap < max / 3)
+	while (gap <= max / 3)
 	{
 		gap = gap * 3 + 1;
 	}
-	while (gap > 0)
+	while (gap >= 1)
 	{
 		for (i = gap; i < max; i++)
 		{
 			temp = array[i];
 			j = i;
-			while (j > (gap - 1) && array[j - gap] >= temp)
+			while (j >= gap && array[j - gap] >= temp)
 			{
 				array[j] = array[j - gap];
 				j -= gap;
