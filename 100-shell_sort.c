@@ -37,7 +37,6 @@ void shell_sort(int *array, size_t size)
 			array[j] = temp;
 		}
 		gap = gap / 3;
-		if (first != array[j])
-			print_array(array, size);
+		print_array(array, size);
 	}
 }
