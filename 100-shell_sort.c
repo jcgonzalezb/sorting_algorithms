@@ -28,10 +28,11 @@ void shell_sort(int *array, size_t size)
 		for (i = gap; i < (int)size; i++)
 		{
 			temp = array[i];
-
-			for (j = i; j > (gap - 1) && array[j - gap] >= temp; j -= gap)
+			j = i;
+			while (j > (gap - 1) && array[j - gap] >= temp)
 			{
 				array[j] = array[j - gap];
+				j -= gap;
 			}
 			array[j] = temp;
 		}
