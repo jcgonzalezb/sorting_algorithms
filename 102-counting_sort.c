@@ -14,13 +14,13 @@ void counting_sort(int *array, size_t size)
 	for (i = 0; i < (int)size; i++)
 		if (array[i] > max)
 			max = array[i];
-	count = (int*)calloc((max + 1), sizeof(int));
-    if (!count)
-        return;
-    for (i = 0; i < (int)size; i++)
-    {
-        count[array[i]]++;
-    }
+	count = (int *)calloc((max + 1), sizeof(int));
+	if (!count)
+		return;
+	for (i = 0; i < (int)size; i++)
+	{
+		count[array[i]]++;
+	}
 	for (i = 1; i <= max; i++)
 	{
 		count[i] += count[i - 1];
