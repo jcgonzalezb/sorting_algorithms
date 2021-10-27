@@ -17,7 +17,7 @@ void swap(int *a, int *b)
  * @array: Array of integers.
  * @low: Starting index inside the array.
  * @high: Ending index inside the array.
- * @size: Size of the string.
+ * @size: Size of the array to sort.
  * Return: Print the array after each time you swap two elements.
  */
 int partition(int *array, int low, int high, size_t size)
