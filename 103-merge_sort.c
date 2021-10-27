@@ -2,84 +2,85 @@
 
 /**
  * merge - Function to merge two subarrays of array.
- * @array: Value inside the first position.
- * @size: Value inside the second position.
+ * @array: Array of integers.
+ * @temp: Temporal array for merging.
  * @l: Left index of the array.
- * @r: Right index of the sub-array of arr to be sorted.
+ * @r: Right index of the sub-array of array to be sorted.
  * @m: Middle position between two subarrays.
  */
-void merge(int *array, int l, int m, int r, size_t size)
+void merge(int *array, int l, int m, int r, int *temp)
 {
-	int i, j, k;
-	int n1 = m - l + 1;
-	int n2 = r - m;
-	int L[n1], R[n2];
+	int i, j, k, n, le = 0, ri = 0, n1 = m - l + 1, n2 = r - m, L[n1], R[n2];
 
-	for (i = 0; i < n1; i++)
-		L[i] = array[l + i];
-	for (j = 0; j < n2; j++)
-		R[j] = array[m + 1 + j];
-
-	i = 0;
-	j = 0;
-	k = l;
-	while (i < n1 && j < n2)
+	printf("Merging...\n");
+	i = l, j = m + 1, k = le = 0;
+	while (i <= m && j <= r)
 	{
-		if (L[i] <= R[j])
-		{
-			array[k] = L[i];
-			i++;
-		}
+		if (array[i] <= array[j])
+			temp[k] = L[le] = array[i], k++, i++, le++;
 		else
-		{
-			array[k] = R[j];
-			j++;
-		}
-	print_array(array, size);
-	k++;
+			temp[k] = R[ri] = array[j], k++, j++, ri++;
 	}
-	while (i < n1)
+	while (i <= m)
+		temp[k] = L[le] = array[i], k++, i++, le++;
+	while (j <= r)
+		temp[k] = R[ri] = array[j], k++, j++, ri++;
+	printf("[left]: ");
+	for (n = 0; n < le; n++)
+		(n == 0) ? printf("%d", L[n]) : printf(", %d", L[n]);
+	printf("\n[right]: ");
+	for (n = 0; n < ri; n++)
+		(n == 0) ? printf("%d", R[n]) : printf(", %d", R[n]);
+	printf("\n[Done]: ");
+	for (i = l; i <= r; i++)
 	{
-		array[k] = L[i];
-		i++;
-		k++;
-	}
-	while (j < n2)
-	{
-		array[k] = R[j];
-		j++;
-		k++;
+		array[i] = temp[i - l], printf("%d", array[i]);
+	if (i != r)
+		printf(", ");
+	else
+		printf("\n");
 	}
 }
 
 /**
  * mergeSort - Function to array of integers in ascending
  * order using the Merge sort algorithm.
- * @array: Value inside the first position.
- * @size: Value inside the second position.
+ * @array: Array of integers.
+ * @temp: Temporal array for merging.
  * @l: Left index of the array.
  * @r: Right index of the sub-array of arr to be sorted.
  */
-void mergeSort(int *array, int l, int r, size_t size)
+void mergeSort(int *array, int l, int r, int *temp)
 {
+	if (l > r)
+		return;
 	if (l < r)
 	{
 		int m = l + (r - l) / 2;
 
-		mergeSort(array, l, m, size);
-		mergeSort(array, m + 1, r, size);
-
-		merge(array, l, m, r, size);
+		mergeSort(array, l, m, temp);
+		mergeSort(array, m + 1, r, temp);
+		merge(array, l, m, r, temp);
 	}
 }
 
 /**
  * merge_sort - Function to array of integers in ascending
  * order using the Merge sort algorithm.
- * @array: Value inside the first position.
- * @size: Value inside the second position.
+ * @array: Array of integers.
+ * @size: Size of the array to sort.
  */
 void merge_sort(int *array, size_t size)
 {
-	mergeSort(array, 0, size - 1, size);
+	int *temp;
+
+	if (array == NULL || size < 2)
+		return;
+
+	temp = malloc(sizeof(int) * (size + 1));
+	if (temp == NULL)
+		return;
+
+	mergeSort(array, 0, size - 1, temp);
+	free(temp);
 }
