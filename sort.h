@@ -30,5 +30,8 @@ int partition(int *array, int low, int high, size_t size);
 void swap(int *a, int *b);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void merge(int arr[], int l, int m, int r, size_t size);
+void mergeSort(int arr[], int l, int r, size_t size);
 
 #endif
