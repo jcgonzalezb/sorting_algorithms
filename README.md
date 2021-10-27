@@ -1,17 +1,15 @@
-# C - Hash tables
+# C - Sorting algorithms & Big O
 
 ## Description of the files and folders inside this folder:
 
-- main_files: Folder with main programs to showcase sample function usage.
-- hash_tables.h: Header file with all function prototypes.
+- sort.h: Header file with all function prototypes.
 
-0. function that creates a hash table.
-1. function that implements the djb2 hash function algorithm.
-2. function that returns index of a key.
-3. function that adds an element to the hash table.
-4. function that retrieves a value associated with a key.
-5. function that prints a hash table.
-6. function that deletes a hash table.
+0. function that sorts an array of integers in ascending order using the Bubble sort algorithm.
+1. function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm.
+2. function that sorts an array of integers in ascending order using the Selection sort algorithm.
+3. function that sorts an array of integers in ascending order using the Quick sort algorithm.
+4. function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence.
+6. function that sorts an array of integers in ascending order using the Counting sort algorithm.
 
 
 ## Languages and Tools:
