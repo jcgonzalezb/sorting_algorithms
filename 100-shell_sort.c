@@ -4,7 +4,7 @@
  * ascending order using the  Shell sort algorithm, using the
  * Knuth sequence.
  * @array: Array of integers.
- * @size: Size of the string.
+ * @size: Size of the array to sort.
  */
 void shell_sort(int *array, size_t size)
 {
