@@ -31,7 +31,7 @@ void swap(int *a, int *b);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
-void merge(int arr[], int l, int m, int r, size_t size);
-void mergeSort(int arr[], int l, int r, size_t size);
+void merge(int *array, int l, int m, int r, int *temp);
+void mergeSort(int *array, int l, int r, int *temp);
 
 #endif
