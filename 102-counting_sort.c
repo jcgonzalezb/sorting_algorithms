@@ -1,8 +1,9 @@
 #include "sort.h"
 /**
- * counting_sort - Function to swap two elements inside an array.
- * @array: Value inside the first position.
- * @size: Value inside the second position.
+ * counting_sort - Function that sorts an array of integers
+ * in ascending order using the Counting sort algorithm.
+ * @array: Array of integers.
+ * @size: Size of the array to sort.
  */
 void counting_sort(int *array, size_t size)
 {
