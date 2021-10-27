@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * merge - Function to merge two subarrays of array.
+ * @array: Value inside the first position.
+ * @size: Value inside the second position.
+ * @l: Left index of the array.
+ * @r: Right index of the sub-array of arr to be sorted.
+ * @m: Middle position between two subarrays.
+ */
 void merge(int *array, int l, int m, int r, size_t size)
 {
 	int i, j, k;
@@ -44,6 +52,14 @@ void merge(int *array, int l, int m, int r, size_t size)
 	}
 }
 
+/**
+ * mergeSort - Function to array of integers in ascending
+ * order using the Merge sort algorithm.
+ * @array: Value inside the first position.
+ * @size: Value inside the second position.
+ * @l: Left index of the array.
+ * @r: Right index of the sub-array of arr to be sorted.
+ */
 void mergeSort(int *array, int l, int r, size_t size)
 {
 	if (l < r)
@@ -58,7 +74,7 @@ void mergeSort(int *array, int l, int r, size_t size)
 }
 
 /**
- * merge_sort - Function to  array of integers in ascending
+ * merge_sort - Function to array of integers in ascending
  * order using the Merge sort algorithm.
  * @array: Value inside the first position.
  * @size: Value inside the second position.
