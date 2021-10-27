@@ -1,6 +1,6 @@
 # C - Sorting algorithms & Big O
 
-## Description of the files and folders inside this folder:
+## Description of the files inside this folder:
 
 - sort.h: Header file with all function prototypes.
 
