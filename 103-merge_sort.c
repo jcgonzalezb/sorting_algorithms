@@ -52,11 +52,13 @@ void merge(int *array, int l, int m, int r, int *temp)
  */
 void mergeSort(int *array, int l, int r, int *temp)
 {
+	int m;
+
 	if (l > r)
 		return;
 	if (l < r)
 	{
-		int m = l + (r - l) / 2;
+		m = ((r + l - 1) / 2);
 
 		mergeSort(array, l, m, temp);
 		mergeSort(array, m + 1, r, temp);
