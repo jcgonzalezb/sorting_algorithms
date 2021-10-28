@@ -10,6 +10,7 @@
 3. function that sorts an array of integers in ascending order using the Quick sort algorithm.
 4. function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence.
 5. function that sorts an array of integers in ascending order using the Counting sort algorithm.
+6. function that sorts an array of integers in ascending order using the Merge sort algorithm.
 
 
 ## Languages and Tools:
