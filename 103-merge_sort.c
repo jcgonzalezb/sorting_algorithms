@@ -52,8 +52,6 @@ void merge(int *array, int l, int m, int r, int *temp)
  */
 void mergeSort(int *array, int l, int r, int *temp)
 {
-	if (l > r)
-		return;
 	if (l < r)
 	{
 		int m = ((r + l - 1) / 2);
@@ -76,11 +74,9 @@ void merge_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 		return;
-
 	temp = malloc(sizeof(*temp) * (size + 1));
 	if (temp == NULL)
 		return;
-
 	mergeSort(array, 0, size - 1, temp);
 	free(temp);
 }
