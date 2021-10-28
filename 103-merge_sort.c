@@ -35,10 +35,10 @@ void merge(int *array, int l, int m, int r, int *temp)
 	for (i = l; i <= r; i++)
 	{
 		array[i] = temp[i - l], printf("%d", array[i]);
-	if (i != r)
-		printf(", ");
-	else
-		printf("\n");
+		if (i != r)
+			printf(", ");
+		else
+			printf("\n");
 	}
 }
 
