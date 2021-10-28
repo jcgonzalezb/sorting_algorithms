@@ -10,7 +10,8 @@
  */
 void merge(int *array, int l, int m, int r, int *temp)
 {
-	int i, j, k, n, le = 0, ri = 0, n1 = m - l + 1, n2 = r - m, L[n1], R[n2];
+	int i, j, k, n, le = 0, ri = 0, n1 = m - l + 1, n2 = r - m;
+	int L[n1], R[n2];
 
 	printf("Merging...\n");
 	i = l, j = m + 1, k = le = 0;
@@ -76,7 +77,7 @@ void merge_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 		return;
-	temp = malloc(sizeof(*temp) * (size));
+	temp = malloc(sizeof(*temp) * (size + 1));
 	if (temp == NULL)
 		return;
 	mergeSort(array, 0, size - 1, temp);
