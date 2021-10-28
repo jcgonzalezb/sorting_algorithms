@@ -10,8 +10,8 @@
  */
 void merge(int *array, int l, int m, int r, int *temp)
 {
-	int i, j, k, n, le = 0, ri = 0, n1 = m - l + 1, n2 = r - m;
-	int L[n1], R[n2];
+	int i, j, k, n, le = 0, ri = 0;
+	int L[4096], R[4096];
 
 	printf("Merging...\n");
 	i = l, j = m + 1, k = le = 0;
