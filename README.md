@@ -4,13 +4,13 @@
 
 - sort.h: Header file with all function prototypes.
 
-0. function that sorts an array of integers in ascending order using the Bubble sort algorithm.
-1. function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm.
-2. function that sorts an array of integers in ascending order using the Selection sort algorithm.
-3. function that sorts an array of integers in ascending order using the Quick sort algorithm.
-4. function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence.
-5. function that sorts an array of integers in ascending order using the Counting sort algorithm.
-6. function that sorts an array of integers in ascending order using the Merge sort algorithm.
+0. Function that sorts an array of integers in ascending order using the Bubble sort algorithm.
+1. Function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm.
+2. Function that sorts an array of integers in ascending order using the Selection sort algorithm.
+3. Function that sorts an array of integers in ascending order using the Quick sort algorithm.
+4. Function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence.
+5. Function that sorts an array of integers in ascending order using the Counting sort algorithm.
+6. Function that sorts an array of integers in ascending order using the Merge sort algorithm.
 
 
 ## Languages and Tools:
